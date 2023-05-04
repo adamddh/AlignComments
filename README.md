@@ -1,6 +1,6 @@
 # AlignComments
 
-Aligns JavaDoc comments in a repo
+Aligns JavaDoc comments recursively in a directory.
 
 ## Usage
 
