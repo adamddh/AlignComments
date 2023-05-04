@@ -30,9 +30,7 @@ def process_file(file_path):
             indent = line.split("/*")[0]
         elif javadoc_started and line.strip().startswith("*/"):
             javadoc_started = False
-            prev_line_star_pos = modified_content[-1].rfind("*")
-            new_line = prev_line_star_pos * " " + "*/\n"
-            modified_content.append(new_line.strip() + "\n")
+            modified_content.append(line)
         elif javadoc_started and line.strip().startswith("*"):
             modified_content.append(
                 f"{indent} " + line.lstrip("*").strip() + "\n")
